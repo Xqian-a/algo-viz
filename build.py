@@ -7,7 +7,7 @@ Output: dist/index.html  (open directly in browser, no server needed)
 import os, re
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-DIST = os.path.join(BASE, 'dist')
+DIST = os.path.join(BASE, 'docs')
 
 # JS files in dependency order (core/utils first, then renderers, algorithms, ui, app)
 JS_FILES = [
