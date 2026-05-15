@@ -1,0 +1,1 @@
+import './kmp.js';

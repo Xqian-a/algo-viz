@@ -1,0 +1,9 @@
+import './bubble-sort.js';
+import './selection-sort.js';
+import './insertion-sort.js';
+import './shell-sort.js';
+import './merge-sort.js';
+import './quick-sort.js';
+import './heap-sort.js';
+import './counting-sort.js';
+import './radix-sort.js';

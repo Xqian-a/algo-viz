@@ -1,0 +1,110 @@
+/* Custom Prism.js dark theme override */
+.code-panel-body pre[class*="language-"],
+.code-panel-body code[class*="language-"] {
+  color: #c9d1d9;
+  text-shadow: none;
+  font-family: var(--font-mono) !important;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+.code-panel-body pre[class*="language-"]::selection,
+.code-panel-body pre[class*="language-"] ::selection,
+.code-panel-body code[class*="language-"]::selection,
+.code-panel-body code[class*="language-"] ::selection {
+  background: var(--accent-blue-glow);
+}
+
+/* Tokens */
+.code-panel-body .token.comment,
+.code-panel-body .token.prolog,
+.code-panel-body .token.doctype,
+.code-panel-body .token.cdata {
+  color: #6b7d8e;
+  font-style: italic;
+}
+
+.code-panel-body .token.punctuation { color: #8b949e; }
+.code-panel-body .token.property,
+.code-panel-body .token.tag,
+.code-panel-body .token.boolean,
+.code-panel-body .token.number,
+.code-panel-body .token.constant,
+.code-panel-body .token.symbol { color: #79c0ff; }
+
+.code-panel-body .token.selector,
+.code-panel-body .token.attr-name,
+.code-panel-body .token.string,
+.code-panel-body .token.char,
+.code-panel-body .token.builtin { color: #a5d6ff; }
+
+.code-panel-body .token.operator,
+.code-panel-body .token.entity,
+.code-panel-body .token.url { color: #d2a8ff; }
+
+.code-panel-body .token.atrule,
+.code-panel-body .token.attr-value,
+.code-panel-body .token.keyword { color: #ff7b72; }
+
+.code-panel-body .token.function,
+.code-panel-body .token.class-name { color: #d2a8ff; }
+
+.code-panel-body .token.regex,
+.code-panel-body .token.important,
+.code-panel-body .token.variable { color: #ffa657; }
+
+.code-panel-body .token.important,
+.code-panel-body .token.bold { font-weight: bold; }
+.code-panel-body .token.italic { font-style: italic; }
+
+/* Line numbers plugin override */
+.code-panel-body pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+.code-panel-body pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: pre;
+}
+
+.code-panel-body .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid var(--border-color);
+  user-select: none;
+  padding-top: var(--sp-lg);
+  padding-bottom: var(--sp-lg);
+}
+
+.code-panel-body .line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+  pointer-events: none;
+}
+
+.code-panel-body .line-numbers-rows > span::before {
+  content: counter(linenumber);
+  color: var(--text-muted);
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+/* Active line highlight */
+.code-panel-body .line-numbers-rows > span.active-line {
+  background: rgba(78, 124, 255, 0.12);
+  display: block;
+}
+
+.code-panel-body .line-numbers-rows > span.active-line::before {
+  color: var(--accent-blue-light);
+  font-weight: 600;
+}
